@@ -10,6 +10,7 @@ class Application:
         wd = self.wd
         wd.get("http://localhost/addressbook/")
 
+
     def login(self,username,password):
         wd = self.wd
         self.open_home_page()
@@ -50,7 +51,6 @@ class Application:
     def open_groups_page(self):
         wd = self.wd
         wd.find_element_by_link_text("groups").click()
-
 
 
     def create_contact(self, Contact):
@@ -105,6 +105,7 @@ class Application:
         wd.find_element_by_name("photo").send_keys(Contact.photo)
         # submit contact
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+
 
     def return_homepage(self):
         wd = self.wd
